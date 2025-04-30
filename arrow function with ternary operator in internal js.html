@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function with Ternary Operator</title>
+</head>
+
+<body>
+    <p id="output"></p>
+    <script>
+        let isMul = true;
+        const func = isMul ?
+            () => {
+                let res = 5 * 5;
+                document.getElementById("output").innerHTML += "The multiplication value is: " + res + "<br>";
+            } :
+            () => {
+                let res = 5 + 5;
+                document.getElementById("output").innerHTML += "The sum value is: " + res + "<br/>";
+            };
+
+        func(); // Invoke the function
+    </script>
+</body>
+
+</html>
