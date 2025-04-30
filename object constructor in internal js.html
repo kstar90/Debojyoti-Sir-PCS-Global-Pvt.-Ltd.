@@ -1,0 +1,16 @@
+<html>
+<body> 
+  <p id = "output"> </p>
+  <script>
+    // Object Constructor -> It is a function in JavaScript that creates an instance of a class, which is typically called an object. A constructor is called when you declare an object using the new keyword. The purpose of a constructor is to create an object and set values if there are any object properties present.
+    function Tree() {
+      this.name = "palm";
+      this.age = 5;
+    }
+    const tree1 = new Tree();
+    document.getElementById("output").innerHTML =
+    "name = " + tree1.name + ", age = " + tree1.age;
+   
+  </script>
+</body>
+</html>
