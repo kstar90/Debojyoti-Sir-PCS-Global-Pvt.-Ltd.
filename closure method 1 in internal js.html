@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    // CNT Variable - The counter() function returns the decrement() function in the example below. The 'cnt' variable is defined inside the counter() function rather than in the global scope.
+    // Counter Function - The counter() function returns the decrement() function in the example below. The 'cnt' variable is defined inside the counter() function rather than in the global scope.
+    // Benefits of closure methods are as follows ->
+    // 1) Encapsulation − The closure allows developers to hide or encapsulate the data. It makes data private and inaccessible from the global scope. So, you can expose only the required variables and functions and hide other internal details of the code.
+    // 2) Preserving State − The function remembers its lexical scope even if the execution of the outer function is completed. So, developers can maintain the state as we were maintaining the state of the counter in the above examples.
+    // 3) Improved memory efficiency − The closure allows you to manage memory efficiently, as you can only retain access to the necessary variables and do not need to define the variables globally.
+    <p id="demo"> </p>
+    <script>
+        const output = document.getElementById("demo");
+        function counter() {
+            let cnt = 100; // Works as a global variable for the decrement function.
+            return function decrement() {
+                cnt = cnt - 1;
+                output.innerHTML += "The value of the cnt is: " + cnt + "<br>";
+            }
+        }
+        const func = counter(); // Returns the decrement() function expression
+        func();
+        func();
+        func();
+    </script>
+</body>
+
+</html>
