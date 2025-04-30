@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Bind Example</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        // Original function with parameters
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        // Using bind to preset the first parameter
+        const multiplyByTwo = multiply.bind(null, 2);
+
+        // Calling the bound function with only the second parameter
+        document.getElementById("output").innerHTML = multiplyByTwo(5); // Output: 10
+    </script>
+</body>
+
+</html>
