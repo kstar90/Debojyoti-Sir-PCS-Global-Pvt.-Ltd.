@@ -1,0 +1,13 @@
+<html>
+<body>
+   <p id = "output">After executing the string.firstCase() method: </p>
+   <script>
+		String.prototype.firstCase = function () {
+			// First character in uppercase. Other characters in lowercase.
+			return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
+		}
+		let str = "hello world";
+		document.getElementById("output").innerHTML += str.firstCase();
+	</script>
+</body>
+</html>
