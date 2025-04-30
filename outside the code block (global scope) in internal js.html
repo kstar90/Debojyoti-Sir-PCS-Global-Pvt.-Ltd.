@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Global Scope Example</title>
+</head>
+
+<body>
+
+  <p id="demo">Demonstrate global variable scope.</p>
+
+  <script>
+    // Global variable
+    var globalVar = "Hello, Global!";
+
+    function accessGlobal() {
+      // Accessing the global variable from inside a function
+      document.getElementById("demo").innerHTML = globalVar;
+    }
+
+    // Calling the function to access the global variable
+    accessGlobal();
+
+    // You can also access the global variable directly outside the function:
+    console.log(globalVar); // Output in console: Hello, Global!
+  </script>
+
+</body>
+
+</html>
