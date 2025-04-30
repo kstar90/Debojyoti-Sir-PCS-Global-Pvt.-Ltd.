@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        const output = document.getElementById("demo");
+        function greet(message) 
+        {
+            output.innerHTML = message + ',' + this.name;
+        }
+        const person = {name: 'John Doe'};
+        greet.call(person, 'Hello');
+    </script>
+</body>
+
+</html>
