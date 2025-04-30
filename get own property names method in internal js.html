@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object.getOwnPropertyNames() Example</title>
+</head>
+<body>
+  <div id="output"> </div>
+  <script>
+    // Definition -> The Object.getOwnPropertyNames() method in JavaScript returns an array of all the properties
+    // found in a given object. This includes both enumerable and non-enumerable properties.
+    
+    const obj = {
+      a: 10,
+      b: 20,
+      c: 30,
+    };
+    document.getElementById("output").innerHTML = Object.getOwnPropertyNames(obj).join(", ");
+  </script>
+</body>
+</html>
