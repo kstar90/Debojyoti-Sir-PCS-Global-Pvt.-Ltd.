@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Designer Info</title>
+</head>
+<body>
+    <h2>Fashion Designer Information</h2>
+    <div id="output"></div>
+
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            atWork() {
+                return this.name + " is at work.";
+            }
+            atHome() {
+                return this.name + " is at home.";
+            }
+            sleeping() {
+                return this.name + " is sleeping.";
+            }
+        }
+
+        class FashionDesigner extends Person {
+            constructor(name, age) {
+                super(name, age);
+            }
+            profession() {
+                return this.name + " is a Fashion Designer.";
+            }
+            doTasks() {
+                return this.atWork() + " " + this.profession();
+            }
+        }
+
+        function display(content) {
+            document.getElementById("output").innerHTML += "<p>" + content + "</p>";
+        }
+
+        const character = new FashionDesigner("Sayan", 30);
+        display(character.profession());
+        display(character.atHome());
+        display(character.doTasks());
+    </script>
+</body>
+</html>
