@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+</head>
+
+<body>
+    <p id="output">The ODCar object is: </p>
+
+    <script>
+        function Car(name, model, year) {
+            this.name = name;
+            this.model = model;
+            this.year = year;
+        }
+
+        const ODCar = new Car("OD", "Q6", 2020);
+        document.getElementById("output").innerHTML += JSON.stringify(ODCar);
+    </script>
+</body>
+
+</html>
