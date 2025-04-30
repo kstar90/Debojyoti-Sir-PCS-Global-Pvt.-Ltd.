@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Call</title>
+</head>
+
+<body>
+    <p id="output1"></p>
+    <p id="output2"></p>
+
+    <script>
+        function printMessage() {
+            return "The age of the " + this.name + " is " + this.age;
+        }
+
+        const person1 = { name: "John Doe", age: 40 };
+        const person2 = { name: "John Doe", age: 22 };
+
+        document.getElementById("output1").innerHTML = printMessage.call(person1);
+        document.getElementById("output2").innerHTML = printMessage.call(person2);
+    </script>
+</body>
+
+</html>
