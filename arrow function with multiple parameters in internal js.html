@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function With Multiple Parameters</title>
+</head>
+
+<body>
+    <p id="output"></p>
+    <script>
+        const sum = (a, b, c, d) => {
+                let sum = a + b + c + d;
+            return sum;
+        };
+            let res = sum(10, 30, 45, 60);
+        document.getElementById("output").innerHTML = "The sum of 10,30,45 and 60 is:" + res;
+    </script>
+</body>
+
+</html>
