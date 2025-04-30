@@ -1,0 +1,22 @@
+<html>
+<body>
+   <div id = "output"> </div>
+   <script>
+      // Callback Function -> In JavaScript it is regularly passed as an argument of another function. Dont consider the callback as a name or keyword here. The callback function name can be any valid identifier.
+      let output = document.getElementById('output');
+      function mathOperation(a, b, callback) {
+         let result = callback(a, b);
+         output.innerHTML += "The result is " + result + ".<br>";
+      }
+      mathOperation(10, 20, function (a, b) {
+         return a + b; // Callback function to add numbers
+      });
+      mathOperation(20, 10, function (a, b) {
+         return a - b; // Callback function to subtract numbers
+      });
+      mathOperation(10, 20, function (a, b) {
+         return a * b; // Callback function to multiply numbers
+      });
+   </script>
+</body>
+</html>
