@@ -1,0 +1,15 @@
+<html>
+
+<body>
+   <p id="output"> </p>
+   <script>
+       // Assignment Operator -> You can use the assignment operator to assign the default values to the variables. Whenever particular property of the object is undefined, it initializes the variable with the default value.
+      // Rest Operator -> The rest operator allows you to collect the remaining properties into a single object.
+      const arr = [[6, 7, 8, 9], [10, 11, 12, 13], 14];
+      const [[a, ...b], ...c] = arr
+      document.getElementById("output").innerHTML =
+         "a = " + a + "<br> b = " + b + "<br> c = " + c; 
+   </script>
+</body>
+
+</html>
