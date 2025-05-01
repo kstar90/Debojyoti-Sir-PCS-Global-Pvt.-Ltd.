@@ -1,0 +1,27 @@
+1) Creates a new collection named employee in the database -> db.createCollection("employee");
+
+2) Inserts a document with the name "debu" and role "hr" into the employee collection -> db.employee.insertOne({name:"debu", role:"hr"});
+
+3) Updates the role of the first document where the name is "debu" to "finance" -> db.employee.updateOne({name:"debu"},{$set:{role:"finance"}});
+
+4) Updates all documents where the name is "debu", changing the name to "ayantika" and role to "doctor" -> db.employee.updateMany({name:"debu"}, {$set": {name:"ayantika", role:"doctor"}});
+
+5) Inserts three documents at once: "debu2" as an engineer, "bidisha" as a doc, and "koyel" as a tester -> db.employee.insert({name:"debu2", role:"engineer"}, {name:"bidisha", role:"doc"), {name:"koyel", role:"tester"});
+
+6) Again inserts three documents: "debu" as an engineer, "bidisha" as a doc, and "koyel" as a tester (possibly duplicating entries) -> db.employee.insert({name:"debu", role:"engineer"}, {name:"bidisha", role:"doc"}, {name:"koyel", role:"tester"});
+
+7) Changes the name of the first document with name "debu" to "arijit" -> db.employee.updateOne({name:"debu"}, {$set:{name:"arijit"}});
+
+8) Retrieves the first document where the name is "arijit" -> db.employee.findOne({name:"arijit"});
+
+9) Retrieves all documents where the role is "engineer" -> db.employee.find({role:"engineer"}};
+
+10) Retrieves all documents where the role is "engineer", with nicely formatted output -> db.employee.find({role:"engineer"}).pretty();
+
+11) Inserts a single document with name "bidisha" and role "doc" (corrected syntax) -> db.employee.insertOne({name:"bidisha"}, {role:"doc"});
+
+12) Updates the role of the document where the name is "bidisha" to "doctor" -> db.employee.updateOne({name:"bidisha"}, {$set.{role: "doctor"}});
+
+13) Deletes the first document found where the name is "arijit" -> db.employee.deleteOne({name:"arijit"});
+
+14) Inserts three new documents with names "amit", "modi", and "mamata" having roles "engineer", "doc", and "tester" respectively -> db.employee.insertMany([{name:"amit", role:"engineer"}, {name:"modi", role:"doc"), (name:"mamata", role:"tester");
